@@ -19,32 +19,34 @@ class TodosController extends \controllers\ControllerBase{
 
     #[Route(path: "/_default/")]
 	public function index(){
-        $list[]=USession::get(self::LIST_SESSION_KEY,[]);
+        $list[]=USession::get(self::ACTIVE_LIST_SESSION_KEY,[]);
         $this->displayList($list);
 	}
 
 	#[Post(path: "add",name: "todos.add")]
 	public function addElement(){
-        $list=USession::get(self::LIST_SESSION_KEY,[]);
+        $list=USession::get(self::ACTIVE_LIST_SESSION_KEY,[]);
         $newElement=URequest::post('elm');
         $list[]=$newElement;
-        USession::set(self::LIST_SESSION_KEY,$list);
-        $this->displayList($list);
+        USession::set(self::ACTIVE_LIST_SESSION_KEY,$list);
+        $this->displayList(USession::get(self::ACTIVE_LIST_SESSION_KEY,[]));
     }
 
 
 	#[Get(path: "delete/{index}",name: "todos.delete")]
 	public function deleteElement($index){
-        $list=USession::get(self::LIST_SESSION_KEY,[]);
+        $list=USession::get(self::ACTIVE_LIST_SESSION_KEY,[]);
         unset($list[$index]);
-        USession::set(self::LIST_SESSION_KEY,$list);
+        USession::set('active-list',\array_values($list));
         $this->displayList($list);
 	}
 
 
-	#[Post(path: "edit/{index}",name: "todos.edit")]
+	#[Get(path: "edit/{index}",name: "todos.edit")]
 	public function editElement($index){
-
+        $list=USession::get(self::ACTIVE_LIST_SESSION_KEY,[]);
+        USession::set('active-list',\array_values($list));
+        $this->displayList($list);
 	}
 
 
