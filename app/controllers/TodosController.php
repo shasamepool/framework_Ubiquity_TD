@@ -2,12 +2,13 @@
 namespace controllers;
 use Ubiquity\attributes\items\router\Get;
 use Ubiquity\attributes\items\router\Post;
+use Ubiquity\attributes\items\router\Route;
 use Ubiquity\utils\http\URequest;
 use Ubiquity\utils\http\USession;
 
 /**
   * Controller TodosController
-  * @property Jsutils $jquery
+  * @property JsUtils $jquery
   */
 
 class TodosController extends \controllers\ControllerBase{
@@ -34,7 +35,10 @@ class TodosController extends \controllers\ControllerBase{
 
 	#[Get(path: "delete/{index}",name: "todos.delete")]
 	public function deleteElement($index){
-		
+        $list=USession::get(self::LIST_SESSION_KEY,[]);
+        unset($list[$index]);
+        USession::set(self::LIST_SESSION_KEY,$list);
+        $this->displayList($list);
 	}
 
 
