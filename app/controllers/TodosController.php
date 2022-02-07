@@ -12,6 +12,8 @@ use Ubiquity\utils\http\USession;
   */
 
 class TodosController extends \controllers\ControllerBase{
+
+
     const CACHE_KEY = 'datas/lists/';
     const EMPTY_LIST_ID = 'not saved';
     const LIST_SESSION_KEY = 'list';
@@ -82,5 +84,7 @@ class TodosController extends \controllers\ControllerBase{
     private function showMessage(string $header, string $message, string $type = '', string $icon = 'info circle',array $buttons=[]) {
         $this->loadView('main/message.html', compact('header', 'type', 'icon', 'message','buttons'));
     }
+
+
 
 }
