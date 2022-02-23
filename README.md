@@ -1,4 +1,4 @@
-# depot_git
+# first-app
 
 This README outlines the details of collaborating on this Ubiquity application.
 A short introduction of this app could easily go here.
@@ -15,7 +15,7 @@ You will need the following things properly installed on your computer.
 ## Installation
 
 * `git clone <repository-url>` this repository
-* `cd depot_git`
+* `cd first-app`
 * `composer install`
 
 ## Running / Development

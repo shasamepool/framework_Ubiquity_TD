@@ -1,0 +1,28 @@
+{% extends "OrgaController/index.html" %}
+
+{% block head %}
+    {{parent ()}}
+{% endblock %}
+
+{% block body %}
+    {{orga}}
+<div class="ui two column grid">
+    <div class="column">
+        <h2>Groupe</h2>
+        <ul>
+            {% for gr in orga.groupes %}
+                <li>{{gr}}</li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <div class="column">
+        <h2>Utilisateur</h2>
+        <ul>
+            {% for ut in orga.users %}
+            <li>{{ut}}</li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>
+{% endblock %}
