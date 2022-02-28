@@ -17,7 +17,12 @@
 {% block body %}
 <ul>
     {% for orga in all %}
-        <a href="{{path('orga.getOne',[orga.id])}}"><li>{{orga}} <a href=""> Edit</a><a href=""> Del</a></li></a>
+        <a href="{{path('orga.getOne',[orga.id])}}">
+            <li>{{orga}}
+                <a> Edit</a>
+                <a href="http://127.0.0.1:8090/orga/remove/{{orga.id}}"> Del</a>
+            </li>
+        </a>
     {% endfor %}
 </ul>
 

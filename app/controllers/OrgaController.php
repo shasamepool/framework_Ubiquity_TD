@@ -42,11 +42,12 @@ class OrgaController extends \controllers\ControllerBase{
 
      #[Post(path: "add",name: "orga.add")]
      public function add(){
+         $monPath = "orga.add";
          $orga=new Organization();
          URequest::setValuesToObject($orga);
          if(DAO::insert($orga)){
              //$message = "truc";
-             $this->loadView('OrgaController/message.html');
+             $this->loadView('OrgaController/message.html',compact('monPath'));
              $this->index();
          }
      }
@@ -55,6 +56,20 @@ class OrgaController extends \controllers\ControllerBase{
      public function frmEdit(int $idOrga){
          $orga=DAO::getById(Organization::class, $idOrga);
          $this->frmOrga($orga);
+     }
+
+     public function frmOrga(Organization $orga, bool $add=true){
+         $monPath = null;
+         if($add == 1)
+            $path = "orga.add";
+         else
+             $path = "orga.frmEdit";
+        $this.$this->loadView('OrgaController/formulaireAjout.html',compact('orga','monPath'));
+    }
+
+     #[Get(path: "remove/{idOrga}",name: "orga.remove")]
+     public function remove(String $idOrga){
+        DAO::remove(DAO::getById(Organization::class,$idOrga));
      }
 
 }
