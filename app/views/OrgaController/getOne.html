@@ -5,12 +5,12 @@
 {% endblock %}
 
 {% block body %}
-    {{orga}}
+    <!--{{orga}}-->
 <div class="ui two column grid">
     <div class="column">
         <h2>Groupe</h2>
         <ul>
-            {% for gr in orga.groupes %}
+            {% for gr in byId.groupes %}
                 <li>{{gr}}</li>
             {% endfor %}
         </ul>
@@ -19,7 +19,7 @@
     <div class="column">
         <h2>Utilisateur</h2>
         <ul>
-            {% for ut in orga.users %}
+            {% for ut in byId.users %}
             <li>{{ut}}</li>
             {% endfor %}
         </ul>

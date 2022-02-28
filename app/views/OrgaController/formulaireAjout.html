@@ -1,0 +1,24 @@
+{% extends "OrgaController/base.html" %}
+
+{% block menu %}
+
+{% endblock %}
+
+
+{% block header %}
+
+{% endblock %}
+
+{% block body %}
+<form action="{{path('orga.add')}}" method="post">
+    <b>Nom</b><br>
+    <input type="text" value="" name="name" placeholder="Nom"><br><br>
+    <b>Domaine</b><br>
+    <input type="text" value="" name="domain" placeholder="Domaine"><br><br>
+    <b>Alias</b><br>
+    <input type="text" value="" name="aliases" placeholder="Alias"><br><br>
+
+    <input type="submit" value="Valider">
+    <input type="reset" value="Annuler">
+</form>
+{% endblock %}
