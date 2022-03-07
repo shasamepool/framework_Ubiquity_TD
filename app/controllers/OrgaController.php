@@ -67,9 +67,8 @@ class OrgaController extends \controllers\ControllerBase{
         $this.$this->loadView('OrgaController/formulaireAjout.html',compact('orga','monPath'));
     }
 
-     #[Get(path: "remove/{idOrga}",name: "orga.remove")]
-     public function remove(String $idOrga){
-        DAO::remove(DAO::getById(Organization::class,$idOrga));
+     #[Post(path: "remove/{idOrga}",name: "orga.remove")]
+     public function remove(int $idOrga){
+        DAO::deleteById(Organization::class,$idOrga);
      }
-
 }
