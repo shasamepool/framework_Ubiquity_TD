@@ -3,6 +3,7 @@ namespace controllers;
 use models\Organization;
 use models\User;
 use Ubiquity\orm\DAO;
+use Ubiquity\utils\flash\FlashMessage;
 use Ubiquity\utils\http\USession;
 use Ubiquity\utils\http\URequest;
 
@@ -25,8 +26,12 @@ class MyAuth extends \Ubiquity\controllers\auth\AuthController{
 			$email=URequest::post($this->_getLoginInputName());
 			$password=URequest::post($this->_getPasswordInputName());
 			$user=DAO::getOne(User::class,"email= ?",false,[$email]);
-            if($user != null){
-                if($user->getPassword === $password){
+            if($user != null){/*
+                if(URequest::password_verify('password',$user->getPassword()))
+                    return $user;*/
+
+
+                if($user->getPassword() === $password){
                     return $user;
                 }
             }
@@ -67,5 +72,14 @@ class MyAuth extends \Ubiquity\controllers\auth\AuthController{
         return false;
     }
 
+    protected function createAccountMessage(FlashMessage $fMessage)
+    {
+        $account=URequest::post('login');
+        $fMessage->setContent("$account créé avec succès !");
+    }
 
+    public function _displayInfoAsString(): bool
+    {
+        return true;
+    }
 }

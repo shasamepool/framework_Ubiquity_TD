@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	
+
 {% block header %}
 	<base href="{{config["siteUrl"]}}">
 	<meta charset="UTF-8">
@@ -21,6 +21,7 @@
 				<div class="ui secondary inverted menu">
 					<a href="/" class="active item">Home</a>
 					<div class="item">{{ _self }}</div>
+					{{ _userInfo | raw }}
 				</div>
 			</div>
 		</header>
