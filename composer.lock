@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b13401c0ba8fbdbe2f1642900fd09c56",
+    "content-hash": "67fbf6692fbe03f2e23f152b73a26501",
     "packages": [
         {
             "name": "frameworks/jquery",
@@ -38,16 +38,16 @@
         },
         {
             "name": "phpmv/php-mv-ui",
-            "version": "2.4.4",
+            "version": "2.4.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpMv/phpMv-UI.git",
-                "reference": "514b5fc9e2cd76c4faf7873b99c9e9f11ca0b4e6"
+                "reference": "75e3a18fd48edfc52a2d566f18ef3444948dff22"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpMv/phpMv-UI/zipball/514b5fc9e2cd76c4faf7873b99c9e9f11ca0b4e6",
-                "reference": "514b5fc9e2cd76c4faf7873b99c9e9f11ca0b4e6",
+                "url": "https://api.github.com/repos/phpMv/phpMv-UI/zipball/75e3a18fd48edfc52a2d566f18ef3444948dff22",
+                "reference": "75e3a18fd48edfc52a2d566f18ef3444948dff22",
                 "shasum": ""
             },
             "require": {
@@ -98,22 +98,22 @@
             ],
             "support": {
                 "issues": "https://github.com/phpMv/phpMv-UI/issues",
-                "source": "https://github.com/phpMv/phpMv-UI/tree/2.4.4"
+                "source": "https://github.com/phpMv/phpMv-UI/tree/2.4.5"
             },
-            "time": "2021-12-31T13:38:04+00:00"
+            "time": "2022-01-05T00:34:09+00:00"
         },
         {
             "name": "phpmv/ubiquity",
-            "version": "dev-master",
+            "version": "2.4.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpMv/ubiquity.git",
-                "reference": "fc548751607786efd4a75a08edd1a532660717fc"
+                "reference": "8ca2f47f3f8aa73920b94291364aa1957c07ea38"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpMv/ubiquity/zipball/fc548751607786efd4a75a08edd1a532660717fc",
-                "reference": "fc548751607786efd4a75a08edd1a532660717fc",
+                "url": "https://api.github.com/repos/phpMv/ubiquity/zipball/8ca2f47f3f8aa73920b94291364aa1957c07ea38",
+                "reference": "8ca2f47f3f8aa73920b94291364aa1957c07ea38",
                 "shasum": ""
             },
             "require": {
@@ -125,7 +125,6 @@
                 "phpmv/ubiquity-dev": "^0.1",
                 "phpmv/ubiquity-devtools": "dev-master"
             },
-            "default-branch": true,
             "type": "framework",
             "extra": {
                 "branch-alias": {
@@ -157,13 +156,13 @@
             ],
             "support": {
                 "issues": "https://github.com/phpMv/ubiquity/issues",
-                "source": "https://github.com/phpMv/ubiquity/tree/master"
+                "source": "https://github.com/phpMv/ubiquity/tree/2.4.11"
             },
-            "time": "2022-02-06T23:22:43+00:00"
+            "time": "2022-02-23T02:36:30+00:00"
         },
         {
             "name": "symfony/polyfill-ctype",
-            "version": "v1.24.0",
+            "version": "v1.25.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-ctype.git",
@@ -195,12 +194,12 @@
                 }
             },
             "autoload": {
-                "psr-4": {
-                    "Symfony\\Polyfill\\Ctype\\": ""
-                },
                 "files": [
                     "bootstrap.php"
-                ]
+                ],
+                "psr-4": {
+                    "Symfony\\Polyfill\\Ctype\\": ""
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -225,7 +224,7 @@
                 "portable"
             ],
             "support": {
-                "source": "https://github.com/symfony/polyfill-ctype/tree/v1.24.0"
+                "source": "https://github.com/symfony/polyfill-ctype/tree/v1.25.0"
             },
             "funding": [
                 {
@@ -245,7 +244,7 @@
         },
         {
             "name": "symfony/polyfill-mbstring",
-            "version": "v1.24.0",
+            "version": "v1.25.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-mbstring.git",
@@ -277,12 +276,12 @@
                 }
             },
             "autoload": {
-                "psr-4": {
-                    "Symfony\\Polyfill\\Mbstring\\": ""
-                },
                 "files": [
                     "bootstrap.php"
-                ]
+                ],
+                "psr-4": {
+                    "Symfony\\Polyfill\\Mbstring\\": ""
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -308,7 +307,7 @@
                 "shim"
             ],
             "support": {
-                "source": "https://github.com/symfony/polyfill-mbstring/tree/v1.24.0"
+                "source": "https://github.com/symfony/polyfill-mbstring/tree/v1.25.0"
             },
             "funding": [
                 {
@@ -328,16 +327,16 @@
         },
         {
             "name": "twig/twig",
-            "version": "v3.3.7",
+            "version": "v3.3.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/twigphp/Twig.git",
-                "reference": "8f168c6ffa3ce76d1786b3cd52275424a3fc675b"
+                "reference": "972d8604a92b7054828b539f2febb0211dd5945c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twigphp/Twig/zipball/8f168c6ffa3ce76d1786b3cd52275424a3fc675b",
-                "reference": "8f168c6ffa3ce76d1786b3cd52275424a3fc675b",
+                "url": "https://api.github.com/repos/twigphp/Twig/zipball/972d8604a92b7054828b539f2febb0211dd5945c",
+                "reference": "972d8604a92b7054828b539f2febb0211dd5945c",
                 "shasum": ""
             },
             "require": {
@@ -388,7 +387,7 @@
             ],
             "support": {
                 "issues": "https://github.com/twigphp/Twig/issues",
-                "source": "https://github.com/twigphp/Twig/tree/v3.3.7"
+                "source": "https://github.com/twigphp/Twig/tree/v3.3.8"
             },
             "funding": [
                 {
@@ -400,7 +399,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-01-03T21:15:37+00:00"
+            "time": "2022-02-04T06:59:48+00:00"
         }
     ],
     "packages-dev": [
@@ -555,17 +554,17 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpMv/ubiquity-attributes.git",
-                "reference": "4726553babe79b4be585c6a01d4ae02a597d91c0"
+                "reference": "b4748ab2bec673371e3f1f513ad4fa2d79185065"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpMv/ubiquity-attributes/zipball/4726553babe79b4be585c6a01d4ae02a597d91c0",
-                "reference": "4726553babe79b4be585c6a01d4ae02a597d91c0",
+                "url": "https://api.github.com/repos/phpMv/ubiquity-attributes/zipball/b4748ab2bec673371e3f1f513ad4fa2d79185065",
+                "reference": "b4748ab2bec673371e3f1f513ad4fa2d79185065",
                 "shasum": ""
             },
             "require": {
                 "php": ">=8.0",
-                "phpmv/ubiquity": "^2.4 | dev-domain-based"
+                "phpmv/ubiquity": "^2.4"
             },
             "default-branch": true,
             "type": "extension",
@@ -601,9 +600,9 @@
             ],
             "support": {
                 "issues": "https://github.com/phpMv/ubiquity-attributes/issues",
-                "source": "https://github.com/phpMv/ubiquity-attributes/tree/main"
+                "source": "https://github.com/phpMv/ubiquity-attributes/tree/0.0.11"
             },
-            "time": "2021-10-17T12:02:48+00:00"
+            "time": "2022-02-14T17:16:58+00:00"
         },
         {
             "name": "phpmv/ubiquity-debug",
@@ -662,16 +661,16 @@
         },
         {
             "name": "phpmv/ubiquity-dev",
-            "version": "0.1.30",
+            "version": "0.1.32",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpMv/ubiquity-dev.git",
-                "reference": "1d250d684c82ebb6c3924558801863c70ee2bedb"
+                "reference": "60ee001b980a68e6481bd55476addc8dfc00c39f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpMv/ubiquity-dev/zipball/1d250d684c82ebb6c3924558801863c70ee2bedb",
-                "reference": "1d250d684c82ebb6c3924558801863c70ee2bedb",
+                "url": "https://api.github.com/repos/phpMv/ubiquity-dev/zipball/60ee001b980a68e6481bd55476addc8dfc00c39f",
+                "reference": "60ee001b980a68e6481bd55476addc8dfc00c39f",
                 "shasum": ""
             },
             "require": {
@@ -710,28 +709,28 @@
             ],
             "support": {
                 "issues": "https://github.com/phpMv/ubiquity-dev/issues",
-                "source": "https://github.com/phpMv/ubiquity-dev/tree/0.1.30"
+                "source": "https://github.com/phpMv/ubiquity-dev/tree/0.1.32"
             },
-            "time": "2022-01-18T15:38:45+00:00"
+            "time": "2022-02-22T00:20:21+00:00"
         },
         {
             "name": "phpmv/ubiquity-webtools",
-            "version": "2.4.14",
+            "version": "2.4.15",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpMv/ubiquity-webtools.git",
-                "reference": "4ba09b64166804504764f7e0593a2c1871b0afe7"
+                "reference": "06a17ab5c355e2d83ddfae329f75517d2e2f029a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpMv/ubiquity-webtools/zipball/4ba09b64166804504764f7e0593a2c1871b0afe7",
-                "reference": "4ba09b64166804504764f7e0593a2c1871b0afe7",
+                "url": "https://api.github.com/repos/phpMv/ubiquity-webtools/zipball/06a17ab5c355e2d83ddfae329f75517d2e2f029a",
+                "reference": "06a17ab5c355e2d83ddfae329f75517d2e2f029a",
                 "shasum": ""
             },
             "require": {
                 "php": ">=7.4",
                 "phpmv/php-mv-ui": ">2.2.19",
-                "phpmv/ubiquity-dev": "^0.1"
+                "phpmv/ubiquity-dev": "^0.1 | dev-master"
             },
             "type": "extension",
             "extra": {
@@ -766,22 +765,22 @@
             ],
             "support": {
                 "issues": "https://github.com/phpMv/ubiquity-webtools/issues",
-                "source": "https://github.com/phpMv/ubiquity-webtools/tree/2.4.14"
+                "source": "https://github.com/phpMv/ubiquity-webtools/tree/2.4.15"
             },
-            "time": "2022-01-03T01:10:22+00:00"
+            "time": "2022-02-22T00:20:49+00:00"
         },
         {
             "name": "prismjs/prism",
-            "version": "v1.26.0",
+            "version": "v1.27.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/PrismJS/prism.git",
-                "reference": "0b6b1e2f0bd520d1396a942fa025ae811bc39383"
+                "reference": "703881e14bf7530b180fad6052e535d0085315cd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PrismJS/prism/zipball/0b6b1e2f0bd520d1396a942fa025ae811bc39383",
-                "reference": "0b6b1e2f0bd520d1396a942fa025ae811bc39383",
+                "url": "https://api.github.com/repos/PrismJS/prism/zipball/703881e14bf7530b180fad6052e535d0085315cd",
+                "reference": "703881e14bf7530b180fad6052e535d0085315cd",
                 "shasum": ""
             },
             "type": "component",
@@ -806,9 +805,9 @@
             "description": "Lightweight, robust, elegant syntax highlighting. A spin-off project from Dabblet.",
             "support": {
                 "issues": "https://github.com/PrismJS/prism/issues",
-                "source": "https://github.com/PrismJS/prism/tree/v1.26.0"
+                "source": "https://github.com/PrismJS/prism/tree/v1.27.0"
             },
-            "time": "2022-01-06T17:49:21+00:00"
+            "time": "2022-02-17T21:38:46+00:00"
         },
         {
             "name": "psr/log",
@@ -864,13 +863,12 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "phpmv/ubiquity": 20,
         "phpmv/ubiquity-attributes": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
-        "php": ">=8.0"
+        "php": ">=7.4"
     },
     "platform-dev": [],
     "plugin-api-version": "2.2.0"
