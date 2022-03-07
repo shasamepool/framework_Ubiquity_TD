@@ -9,6 +9,12 @@ namespace controllers;
   */
 class MainController extends \controllers\ControllerBase{
     use WithAuthTrait;
+    #[Autowired]
+    private OrgaRepository $repo;
+
+    public function setRepo(OrgaRepository $repo): void {
+        $this->repo = $repo;
+    }
 
     #[Route(path: '_default', name : 'home')]
 	public function index(){

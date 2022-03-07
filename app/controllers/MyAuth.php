@@ -26,11 +26,9 @@ class MyAuth extends \Ubiquity\controllers\auth\AuthController{
 			$email=URequest::post($this->_getLoginInputName());
 			$password=URequest::post($this->_getPasswordInputName());
 			$user=DAO::getOne(User::class,"email= ?",false,[$email]);
-            if($user != null){/*
+            if($user != null){
                 if(URequest::password_verify('password',$user->getPassword()))
-                    return $user;*/
-
-
+                    return $user;
                 if($user->getPassword() === $password){
                     return $user;
                 }
@@ -81,5 +79,11 @@ class MyAuth extends \Ubiquity\controllers\auth\AuthController{
     public function _displayInfoAsString(): bool
     {
         return true;
+    }
+    protected function noAccessMessage(FlashMessage $fMessage)
+    {
+        $fMessage->setTitle('Accès interdit');
+        $fMessage->setContent("cette zone ne vous est pas autorizer");
+
     }
 }
