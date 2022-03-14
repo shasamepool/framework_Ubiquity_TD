@@ -21,6 +21,7 @@ class MyAuth extends \Ubiquity\controllers\auth\AuthController{
 		}
 	}
 
+
 	protected function _connect() {
 		if(URequest::isPost()){
 			$email=URequest::post($this->_getLoginInputName());
@@ -29,7 +30,7 @@ class MyAuth extends \Ubiquity\controllers\auth\AuthController{
             if($user != null){
                 if(URequest::password_verify('password',$user->getPassword()))
                     return $user;
-                if($user->getPassword() === $password){
+                else if($user->getPassword() === $password){
                     return $user;
                 }
             }
