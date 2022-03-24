@@ -5,4 +5,6 @@
     {{img('store/'~elm.image~'.jgp')}}
     <b>{{elm.name}}</b>
     <p>{{elm.price}}</p>
+    <a href="{{ path('store.addToCart',[1,1]) }}"> + To Cart</a>
+<br><br>
 {% endfor %}
