@@ -2,7 +2,9 @@
 <h2>{{section.name}}</h2>
 
 {% for elm in section.products%}
-    {{img('store/'~elm.image~'.jgp')}}
+    {{img('store/'~elm.image~'.jpg')}}
     <b>{{elm.name}}</b>
     <p>{{elm.price}}</p>
+    <a href="{{ path('store.addToCart',[elm.id,elm.price]) }}"> + To Cart</a>
+<br><br>
 {% endfor %}
