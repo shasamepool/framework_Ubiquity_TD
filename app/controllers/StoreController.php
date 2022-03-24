@@ -2,9 +2,11 @@
 namespace controllers;
 use models\Product;
 use models\Section;
+use MongoDB\Driver\Session;
 use Ubiquity\attributes\items\di\Autowired;
 use Ubiquity\attributes\items\router\Get;
 use Ubiquity\attributes\items\router\Route;
+use Ubiquity\cache\objects\SessionCache;
 use Ubiquity\controllers\auth\WithAuthTrait;
 use Ubiquity\orm\DAO;
 
@@ -28,7 +30,7 @@ class StoreController extends \controllers\ControllerBase
     public function storeSection($idSection)
     {
         if(!isset($this->a['count']))
-            $this->a['count'] = 0;
+            $this->a['count'] = 2;
         $section=DAO::getbyId(Section::class, $idSection,['products']);
         $this->loadView('@activeTheme/main/vMenu.html', ['count'=>$this->a['count']]);
         $this->loadView("StoreController/storeSection.html", ['section'=>$section]);
@@ -38,7 +40,7 @@ class StoreController extends \controllers\ControllerBase
     public function allProduct()
     {
         if(!isset($this->a['count']))
-            $this->a['count'] = 0;
+            $this->a['count'] = 3;
         $products=DAO::getAll(Product::class);
         $this->loadView('@activeTheme/main/vMenu.html',['count'=>$this->a['count']]);
         $this->loadView("StoreController/storeSectionBis.html", ['products'=>$products]);
