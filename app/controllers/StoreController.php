@@ -23,9 +23,9 @@ class StoreController extends \controllers\ControllerBase
     #[Route(path: "section/{idSection}", name: "store.section")]
     public function storeSection(int $idSection)
     {
-        $product=DAO::getbyId(Product::class, $idSection);
+        $section=DAO::getbyId(Section::class, $idSection,['products']);
         $this->loadView('@activeTheme/main/vMenu.html');
-        $this->loadView("StoreController/storeSection.html", ['product'=>$product]);
+        $this->loadView("StoreController/storeSection.html", ['section'=>$section]);
     }
 
 }
