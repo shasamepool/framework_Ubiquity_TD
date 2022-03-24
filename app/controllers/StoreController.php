@@ -1,5 +1,6 @@
 <?php
 namespace controllers;
+use models\Product;
 use models\Section;
 use Ubiquity\attributes\items\di\Autowired;
 use Ubiquity\attributes\items\router\Route;
@@ -18,13 +19,13 @@ class StoreController extends \controllers\ControllerBase
         $this->loadView("StoreController/index.html",['section'=>$section]);
     }
 
+
     #[Route(path: "section/{idSection}", name: "store.section")]
-    public function storeSection()
+    public function storeSection(int $idSection)
     {
-
+        $product=DAO::getbyId(Product::class, $idSection);
+        $this->loadView('@activeTheme/main/vMenu.html');
+        $this->loadView("StoreController/storeSection.html", ['product'=>$product]);
     }
 
-    public function nbproduits(){
-        return "1";
-    }
 }

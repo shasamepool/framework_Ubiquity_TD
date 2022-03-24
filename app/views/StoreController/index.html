@@ -4,6 +4,5 @@
 {% for elm in section%}
     <h1>{{elm.name}}</h1>
     <p>{{elm.description}}</p>
-    <p>Consulter produits ()</p>
+    <a href="{{ path('store.section') }}">Consulter produits ()</a>
 {% endfor %}
-
