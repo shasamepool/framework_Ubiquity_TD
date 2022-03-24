@@ -28,4 +28,13 @@ class StoreController extends \controllers\ControllerBase
         $this->loadView("StoreController/storeSection.html", ['section'=>$section]);
     }
 
+    #[Route(path: "allProducts", name: "store.allProducts")]
+    public function allProduct()
+    {
+        $products=DAO::getAll(Product::class);
+        $this->loadView('@activeTheme/main/vMenu.html');
+        $this->loadView("StoreController/storeSectionBis.html", ['products'=>$products]);
+    }
+
+
 }

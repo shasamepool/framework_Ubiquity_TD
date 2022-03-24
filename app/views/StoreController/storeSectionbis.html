@@ -1,0 +1,8 @@
+<h1>Section</h1>
+<h2>Tous les Produits</h2>
+
+{% for elm in products%}
+    {{img('store/'~elm.image~'.jgp')}}
+    <b>{{elm.name}}</b>
+    <p>{{elm.price}}</p>
+{% endfor %}
